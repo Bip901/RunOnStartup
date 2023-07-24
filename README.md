@@ -1,5 +1,7 @@
 # RunOnStartup
 
+[![NuGet version](https://img.shields.io/nuget/v/RunOnStartup.svg)](https://www.nuget.org/packages/RunOnStartup/)
+
 A cross-platform .NET library to register programs to run at computer startup.
 
 # Usage

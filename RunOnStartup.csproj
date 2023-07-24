@@ -2,8 +2,29 @@
 
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
-		<Nullable>enable</Nullable>
 		<ImplicitUsings>disable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Version>0.5.0</Version>
 	</PropertyGroup>
+
+	<PropertyGroup>
+		<PackageId>RunOnStartup</PackageId>
+		<Version>$(VERSION)</Version>
+		<Authors>Bip901</Authors>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Title>RunOnStartup</Title>
+		<Description>A cross-platform .NET library to register programs to run at computer startup.</Description>
+		<Copyright>2023 Ori Almagor</Copyright>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/Bip901/RunOnStartup</RepositoryUrl>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Update="README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 
 </Project>
