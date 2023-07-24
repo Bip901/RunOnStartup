@@ -20,7 +20,7 @@ namespace RunOnStartup
             }
             else if (OperatingSystem.IsLinux())
             {
-
+                return new RunOnStartupLinux();
             }
             else
             {
