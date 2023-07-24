@@ -16,7 +16,7 @@ namespace RunOnStartup
             "[Desktop Entry]\n" +
             "Type=Application\n" +
             "Name={0}\n" +
-            "Exec=\"{1}\" {2}\n" +
+            "Exec={1}\n" +
             "NoDisplay=true\n";
 
         private static string GetStartupFolderPath(bool allUsers)
@@ -29,18 +29,29 @@ namespace RunOnStartup
             return Path.Combine(startupFolderPath, uniqueName + DESKTOP_FILE_EXTENSION);
         }
 
+        private static string BuildExecCommandLine(string programPath, string? escapedArguments)
+        {
+            string execCommandline = $"\"{programPath}\"";
+            if (escapedArguments != null)
+            {
+                execCommandline += " " + escapedArguments;
+            }
+            return execCommandline;
+        }
+
         public bool IsRegistered(string uniqueName, bool allUsers)
         {
             string startupFolderPath = GetStartupFolderPath(allUsers);
             return File.Exists(GetDesktopFilePath(startupFolderPath, uniqueName));
         }
 
-        public void Register(string programPath, string arguments, string uniqueName, bool allUsers)
+        public void Register(string uniqueName, string programPath, string? arguments, bool allUsers)
         {
             string startupFolderPath = GetStartupFolderPath(allUsers);
             Directory.CreateDirectory(startupFolderPath);
             string desktopFilePath = GetDesktopFilePath(startupFolderPath, uniqueName);
-            File.WriteAllText(desktopFilePath, string.Format(DESKTOP_FILE_TEMPLATE, uniqueName, programPath, arguments));
+            string execCommandline = BuildExecCommandLine(programPath, arguments);
+            File.WriteAllText(desktopFilePath, string.Format(DESKTOP_FILE_TEMPLATE, uniqueName, execCommandline));
         }
 
         public bool Unregister(string uniqueName, bool allUsers)

@@ -23,7 +23,7 @@ namespace RunOnStartup
 			return Registry.GetValue(GetKeyPath(allUsers), uniqueName, null) != null;
 		}
 
-		public void Register(string programPath, string arguments, string uniqueName, bool allUsers)
+		public void Register(string uniqueName, string programPath, string? arguments, bool allUsers)
 		{
 			Registry.SetValue(GetKeyPath(allUsers), uniqueName, $"\"{programPath}\" {arguments}");
 		}
