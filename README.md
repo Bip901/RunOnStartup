@@ -13,8 +13,8 @@ using RunOnStartup;
 const string UNIQUE_NAME = "cool-executable-42dad1492ea57616";
 
 // Register an executable to run whenever the current user signs in
-RunOnStartup.Instance.Register(UNIQUE_NAME, @"/path/to/executable", allUsers: false);
+RunOnStartupManager.Instance.Register(UNIQUE_NAME, @"/path/to/executable", allUsers: false);
 
 // To unregister:
-RunOnStartup.Instance.Unregister(UNIQUE_NAME, allUsers: false);
+RunOnStartupManager.Instance.Unregister(UNIQUE_NAME, allUsers: false);
 ```
