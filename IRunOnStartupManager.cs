@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RunOnStartup
 {
-    public interface IRunOnStartup
+    public interface IRunOnStartupManager
     {
         /// <summary>
         /// Checks whether the given program was registered to run on startup.

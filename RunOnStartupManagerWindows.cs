@@ -7,7 +7,7 @@ using System.Text;
 namespace RunOnStartup
 {
     [SupportedOSPlatform("windows")]
-    internal class RunOnStartupWindows : IRunOnStartup
+    internal class RunOnStartupManagerWindows : IRunOnStartupManager
 	{
 		private const string PARTIAL_KEY_PATH = "Software\\Microsoft\\Windows\\CurrentVersion\\Run";
 		private const string ALL_USERS_KEY_PATH = "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Run";
