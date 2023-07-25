@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RunOnStartup
 {
-    public class RunOnStartupManagerLinux : IRunOnStartupManager
+    internal class RunOnStartupManagerLinux : IRunOnStartupManager
     {
         private const string ALL_USERS_STARTUP_PATH = "/etc/xdg/autostart/";
         private const string CURRENT_USER_STARTUP_PATH = "%HOME%/.config/autostart/";
