@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RunOnStartup
 {
@@ -50,7 +46,7 @@ namespace RunOnStartup
             string startupFolderPath = GetStartupFolderPath(allUsers);
             Directory.CreateDirectory(startupFolderPath);
             string desktopFilePath = GetDesktopFilePath(startupFolderPath, uniqueName);
-            string execCommandline = BuildExecCommandLine(programPath, arguments);
+            string execCommandline = BuildExecCommandLine(Path.GetFullPath(programPath), arguments);
             File.WriteAllText(desktopFilePath, string.Format(DESKTOP_FILE_TEMPLATE, uniqueName, execCommandline));
         }
 

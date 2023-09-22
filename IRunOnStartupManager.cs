@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RunOnStartup
 {
+    /// <summary>
+    /// Manages registering and unregistering programs from startup.
+    /// </summary>
     public interface IRunOnStartupManager
     {
         /// <summary>

@@ -4,7 +4,8 @@
 		<TargetFramework>net6.0</TargetFramework>
 		<ImplicitUsings>disable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<Version>0.5.2</Version>
+		<Version>0.5.3</Version>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -18,6 +19,7 @@
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryUrl>https://github.com/Bip901/RunOnStartup</RepositoryUrl>
+		<DocumentationFile>$(MSBuildProjectDirectory)/bin/$(Configuration)/net6.0/RunOnSTartup.xml</DocumentationFile>
 	</PropertyGroup>
 
 	<ItemGroup>

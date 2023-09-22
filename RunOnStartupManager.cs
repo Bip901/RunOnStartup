@@ -1,8 +1,10 @@
 ﻿using System;
-using System.Runtime.InteropServices;
 
 namespace RunOnStartup
 {
+    /// <summary>
+    /// A utility class to get the platform-specific singleton <see cref="IRunOnStartupManager"/>.
+    /// </summary>
     public static class RunOnStartupManager
     {
         /// <summary>

@@ -1,8 +1,6 @@
 ﻿using Microsoft.Win32;
-using System;
-using System.Collections.Generic;
+using System.IO;
 using System.Runtime.Versioning;
-using System.Text;
 
 namespace RunOnStartup
 {
@@ -25,6 +23,7 @@ namespace RunOnStartup
 
 		public void Register(string uniqueName, string programPath, string? arguments, bool allUsers)
 		{
+			programPath = Path.GetFullPath(programPath);
 			Registry.SetValue(GetKeyPath(allUsers), uniqueName, $"\"{programPath}\" {arguments}");
 		}
 
