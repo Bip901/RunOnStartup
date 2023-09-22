@@ -19,7 +19,7 @@
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryUrl>https://github.com/Bip901/RunOnStartup</RepositoryUrl>
-		<DocumentationFile>$(MSBuildProjectDirectory)/bin/$(Configuration)/net6.0/RunOnSTartup.xml</DocumentationFile>
+		<DocumentationFile>$(MSBuildProjectDirectory)/bin/$(Configuration)/net6.0/RunOnStartup.xml</DocumentationFile>
 	</PropertyGroup>
 
 	<ItemGroup>
