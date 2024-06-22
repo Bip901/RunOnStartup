@@ -1,11 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net6.0</TargetFramework>
+		<TargetFrameworks>net6.0;net8.0</TargetFrameworks>
 		<ImplicitUsings>disable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<Version>0.5.3</Version>
+		<Version>0.6.0</Version>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<IsAotCompatible>true</IsAotCompatible>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -19,11 +20,14 @@
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryUrl>https://github.com/Bip901/RunOnStartup</RepositoryUrl>
-		<DocumentationFile>$(MSBuildProjectDirectory)/bin/$(Configuration)/net6.0/RunOnStartup.xml</DocumentationFile>
+		<PackageProjectUrl>https://github.com/Bip901/RunOnStartup</PackageProjectUrl>
+		<RepositoryType>Git</RepositoryType>
+		<PackageTags>autostart multi-platform xdg</PackageTags>
+		<DocumentationFile>$(MSBuildProjectDirectory)/bin/$(Configuration)/$(TargetFramework)/RunOnStartup.xml</DocumentationFile>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<None Update="README.md">
+		<None Include="README.md">
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
